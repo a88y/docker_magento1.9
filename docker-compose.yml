@@ -1,0 +1,12 @@
+
+version: '2'
+services:
+  magentoapp:
+    image: martonowibowo/centos:magentoapp
+    volumes:
+      - "./docker_var/:/mnt"
+    network_mode: bridge
+    ports:
+      - "80:80"
+      - "3306:3306"
+    tty: true
